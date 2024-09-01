@@ -1,4 +1,4 @@
-import "./Transaction.module.css";
+import './Transaction.module.css'
 
 export default function Transaction({ type, amount, currency, variant }) {
   return (
