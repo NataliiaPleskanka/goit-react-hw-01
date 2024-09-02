@@ -1,5 +1,6 @@
 import css from "./FriendListItem.module.css";
 import FriendItemStyle from "../FriendItemStyle/FriendItemStyle";
+
 export default function FriendListItem({ avatar, name, isOnline }) {
   return (
     <div className={css.friendItem}>

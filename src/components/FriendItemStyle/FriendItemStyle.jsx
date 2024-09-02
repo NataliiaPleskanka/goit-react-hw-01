@@ -1,6 +1,6 @@
-import "./FriendItemStyle.module.css";
+import css from "./FriendItemStyle.module.css";
 
 export default function FriendItemStyle({ variant, children }) {
-  const styles = ["status", variant];
-  return <p className={styles.join(" ")}>{children}</p>;
+  const className = `${css.status} ${css[variant]}`;
+  return <p className={className}>{children}</p>;
 }
