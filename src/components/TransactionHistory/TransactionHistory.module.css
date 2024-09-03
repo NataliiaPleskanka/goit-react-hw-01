@@ -1,20 +1,23 @@
 .table {
-    margin: 30px auto 0;
-    border-collapse: collapse;
-    border: 1px solid black;
-  }
-  .tableHead {
-    background-color: rgb(42, 42, 42);
-    color: #fff;
-  }
-  .tableHeadCell {
-    width: 100px;
-    text-align: center;
-  }
-  
-  td,
-  th {
-    border: 1px solid black;
-    width: 130px;
-    height: 30px;
-  }
+  width: 600px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+.type {
+  text-transform: capitalize;
+}
+
+.tableTitle {
+  background-color: black;
+  color: aliceblue;
+}
+
+.tableString:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.94);
+}
+.tableString:nth-child(odd) {
+  background-color: white;
+}

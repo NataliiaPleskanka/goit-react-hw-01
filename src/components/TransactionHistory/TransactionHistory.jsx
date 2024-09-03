@@ -1,28 +1,25 @@
-import Transaction from "../Transaction/Transaction";
+import React from "react";
 import css from "./TransactionHistory.module.css";
+
 export default function TransactionHistory({ items }) {
-  let changingBgColor = "gray";
   return (
     <table className={css.table}>
       <thead>
-        <tr className={css.tableHead}>
-          <th className={css.tableHeadCell}>Type</th>
-          <th className={css.tableHeadCell}>Amount</th>
-          <th className={css.tableHeadCell}>Currency</th>
+        <tr className={css.tableTitle}>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
         </tr>
       </thead>
 
       <tbody>
         {items.map((item) => {
-          changingBgColor = changingBgColor === "gray" ? "white" : "gray";
           return (
-            <Transaction
-              key={item.id}
-              variant={changingBgColor}
-              type={item.type}
-              amount={item.amount}
-              currency={item.currency}
-            ></Transaction>
+            <tr className={css.tableString} key={item.id}>
+              <td className={css.type}>{item.type}</td>
+              <td>{item.amount}</td>
+              <td>{item.currency}</td>
+            </tr>
           );
         })}
       </tbody>
